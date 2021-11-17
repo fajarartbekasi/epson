@@ -1,0 +1,20 @@
+Actor
+1. customer / Member
+    ->Pemesanan (Sudah)
+    ->pembayaran (sudah)
+    ->membatalkan pesanan
+
+2. admin
+    ->data customer
+    ->laporan
+    ->menerima Pemesanan
+    ->invite
+
+3. gudang
+    ->mengelola stock produck (sudah)
+4. direktur
+    ->cetak laporan
+
+
+
+    customer
