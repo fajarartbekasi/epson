@@ -48,3 +48,12 @@ Route::group(['prefix'=> 'user'], function(){
     route::get('transaksi','User\TransaksiController@index')->name('user.transaksi');
     route::post('destroy/transaksi/{pembelian}','User\TransaksiController@destroy')->name('user.destroy.transaksi');
 });
+
+Route::group(['prefix' => 'petugas'], function(){
+    route::get('/','UserController@index')->name('petugas');
+    route::get('/create','UserController@create')->name('petugas.create');
+    route::post('/store','UserController@store')->name('petugas.store');
+    route::get('/edit/{user}','UserController@edit')->name('petugas.edit');
+    route::patch('/update/{user}','UserController@update')->name('petugas.update');
+    route::delete('/destroy/{user}','UserController@destroy')->name('petugas.destroy');
+});
