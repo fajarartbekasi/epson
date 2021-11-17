@@ -166,6 +166,7 @@ return [
          * Package Service Providers...
          */
         Intervention\Image\ImageServiceProvider::class,
+        Spatie\Permission\PermissionServiceProvider::class,
         Alfa6661\AutoNumber\AutoNumberServiceProvider::class,
         /*
          * Application Service Providers...
