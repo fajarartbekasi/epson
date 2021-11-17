@@ -8,7 +8,8 @@
     <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-                <a class="nav-link active text-secondary" aria-current="page" href="#">Produk</a>
+                <a class="nav-link text-secondary" href="{{route('home')}}">
+                {{ __('Home') }}</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-secondary" href="{{route('user.cek.cart')}}">Keranjang</a>

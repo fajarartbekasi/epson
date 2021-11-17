@@ -2,7 +2,7 @@ Actor
 1. customer / Member
     ->Pemesanan (Sudah)
     ->pembayaran (sudah)
-    ->membatalkan pesanan
+    ->membatalkan pesanan (sudah)
 
 2. admin
     ->data customer

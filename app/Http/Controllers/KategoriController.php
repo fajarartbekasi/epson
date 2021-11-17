@@ -43,6 +43,7 @@ class KategoriController extends Controller
 
         $kategori->update($request->all());
 
+        flash('Kategori berhasil diperbarui');
         return redirect()->back();
     }
     public function destroy(Request $request,$id)
@@ -50,6 +51,8 @@ class KategoriController extends Controller
         $kategori = Kategori::findOrFail($id);
 
         $kategori->delete($request->all());
+
+        flash('Kategori berhasil dihapus');
 
         return redirect()->back();
     }

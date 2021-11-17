@@ -24,11 +24,13 @@ class ProduckController extends Controller
     public function store()
     {
 
-        $produck = Produk::create($this->validateRequest());
+       $produck = Produk::create($this->validateRequest());
 
        $this->storeImage($produck);
 
-        return redirect()->back();
+       flash('Produk berhasil ditambahkan');
+
+       return redirect()->back();
     }
     public function edit($id)
     {
@@ -42,11 +44,13 @@ class ProduckController extends Controller
 
         $produck->update($request->all());
 
+        flash('Kategori berhasil diperbarui');
+
         return redirect()->back();
     }
     public function show($id)
     {
-        $kategoris = Kategori::all();
+       $kategoris = Kategori::all();
        $produk = Produk::findOrFail($id);
 
        return view('produk.show', compact('produk','kategoris'));

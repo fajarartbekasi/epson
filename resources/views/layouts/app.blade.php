@@ -34,29 +34,39 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-                            <a class="nav-link text-secondary" href="">
+                            <a class="nav-link text-secondary" href="{{route('home')}}">
                             {{ __('Home') }}</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-secondary" href="{{route('kategory')}}">
-                            {{ __('Kategori') }}</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-secondary" href="{{route('produck')}}">
-                            {{ __('Produk') }}</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-secondary" href="">
-                            {{ __('Pembelian') }}</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-secondary" href="">
-                            {{ __('Penjualan') }}</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-secondary" href="">
-                            {{ __('Laporan') }}</a>
-                        </li>
+                        @role('admin')
+                            <li class="nav-item">
+                                <a class="nav-link text-secondary" href="">
+                                {{ __('Data Petugas') }}</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-secondary" href="">
+                                {{ __('Pembelian') }}</a>
+                            </li>
+                        @endrole
+                        @role('gudang|direktur')
+                            <li class="nav-item">
+                                <a class="nav-link text-secondary" href="{{route('kategory')}}">
+                                {{ __('Kategori') }}</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-secondary" href="{{route('produck')}}">
+                                {{ __('Produk') }}</a>
+                            </li>
+                        @endrole
+                        @role('customer')
+                            <li class="nav-item">
+                                <a class="nav-link text-secondary" href="{{route('user.transaksi')}}">
+                                {{ __('transaksi') }}</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-secondary" href="{{route('user.cek.cart')}}">
+                                {{ __('keranjang') }}</a>
+                            </li>
+                        @endrole
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -95,6 +105,8 @@
             </div>
         </nav>
         <main class="py-4">
+            @include('flash::message')
+            @include('layouts._errors')
             @yield('content')
         </main>
     </div>

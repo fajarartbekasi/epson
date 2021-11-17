@@ -44,4 +44,7 @@ Route::group(['prefix'=> 'user'], function(){
 
     route::get('ambil-form/{pembelian}','PembayaranController@create')->name('user.ambil-form');
     route::post('upload-payment/{pembelian}','PembayaranController@store')->name('user.upload-payment');
+
+    route::get('transaksi','User\TransaksiController@index')->name('user.transaksi');
+    route::post('destroy/transaksi/{pembelian}','User\TransaksiController@destroy')->name('user.destroy.transaksi');
 });
