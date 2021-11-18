@@ -56,4 +56,6 @@ Route::group(['prefix' => 'petugas'], function(){
     route::get('/edit/{user}','UserController@edit')->name('petugas.edit');
     route::patch('/update/{user}','UserController@update')->name('petugas.update');
     route::delete('/destroy/{user}','UserController@destroy')->name('petugas.destroy');
+
+    route::get('customer','CustomerController@index')->name('petugas.customer');
 });

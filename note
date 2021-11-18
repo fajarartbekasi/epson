@@ -5,10 +5,10 @@ Actor
     ->membatalkan pesanan (sudah)
 
 2. admin
-    ->data customer
+    ->data customer (sudah)
     ->laporan
     ->menerima Pemesanan
-    ->invite
+    ->invite (sudah)
 
 3. gudang
     ->mengelola stock produck (sudah)

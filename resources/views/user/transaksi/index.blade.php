@@ -36,6 +36,7 @@
                                     <td>
                                         <form action="{{route('user.destroy.transaksi', $pembelian->id)}}" method="post">
                                             @csrf
+                                            <a href="{{route('user.ambil-form',$pembelian->id)}}" class="btn btn-info btn-sm">Upload Bukti Pembayaran</a>
                                             <button class="btn btn-danger btn-sm">Hapus belanjaan</button>
                                         </form>
                                     </td>

@@ -43,6 +43,10 @@
                                 {{ __('Data Petugas') }}</a>
                             </li>
                             <li class="nav-item">
+                                <a class="nav-link text-secondary" href="{{route('petugas.customer')}}">
+                                {{ __('Data Customer') }}</a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link text-secondary" href="">
                                 {{ __('Pembelian') }}</a>
                             </li>
