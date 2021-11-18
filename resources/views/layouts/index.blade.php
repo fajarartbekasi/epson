@@ -22,7 +22,15 @@
 <body>
     <div id="app">
         @include('layouts.nav')
-        <main class="py-4">
+        <main role="main" class="mb-3">
+            <div class="jumbotron bg-white" style="background-image: url('img/shopping.png'); background-size: 25%; background-repeat: no-repeat;">
+                <div class="container text-center">
+                    <h1 class="display-3 ">Hello, </h1>
+                    <p class="">
+                        Selamat datang, Silahkan cari barang impian mu disini
+                    </p>
+                </div>
+            </div>
             @include('flash::message')
             @include('layouts._errors')
             @yield('content')
