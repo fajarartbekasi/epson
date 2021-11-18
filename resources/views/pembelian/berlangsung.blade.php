@@ -39,7 +39,7 @@
                                             @csrf
                                             @method('PATCH')
 
-                                            <a href="http://" class="btn btn-info btn-sm">Cetak Invoice</a>
+                                            <a href="{{route('cetak.invoice', $pembelian->id)}}" class="btn btn-info btn-sm">Cetak Invoice</a>
                                             <button class="btn btn-success btn-sm">Update transaksi</button>
                                         </form>
                                     </td>

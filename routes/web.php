@@ -64,3 +64,7 @@ Route::group(['prefix' => 'petugas'], function(){
     route::get('transaksi/selesai', 'Admin\TransaksiController@selesai')->name('petugas.pembelian.selesai');
     route::patch('transaksi/update/{pembelian}', 'Admin\TransaksiController@update')->name('petugas.pembelian.update');
 });
+
+Route::group(['prefix'=>'cetak'], function(){
+    route::get('invoice/{pembelian}','Laporan\Transaksi\TransaksiController@show')->name('cetak.invoice');
+});
