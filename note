@@ -7,7 +7,7 @@ Actor
 2. admin
     ->data customer (sudah)
     ->laporan
-    ->menerima Pemesanan
+    ->menerima Pemesanan (sudah)
     ->invite (sudah)
 
 3. gudang

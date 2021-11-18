@@ -28,7 +28,7 @@ class PembayaranController extends Controller
         if($pembayaran->save()){
 
             $pembelian->update([
-                'status'    => 'terverifikasi'
+                'status'    => 'berlangsung'
             ]);
         }
 
