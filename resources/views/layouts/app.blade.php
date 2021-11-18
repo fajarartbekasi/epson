@@ -51,11 +51,19 @@
                                 {{ __('Pembelian') }}</a>
                             </li>
                         @endrole
-                        @role('gudang|direktur')
+                        @role('gudang')
                             <li class="nav-item">
                                 <a class="nav-link text-secondary" href="{{route('kategory')}}">
                                 {{ __('Kategori') }}</a>
                             </li>
+                        @endrole
+                        @role('direktur')
+                            <li class="nav-item">
+                                <a class="nav-link text-secondary" href="{{route('petugas.pembelian.selesai')}}">
+                                {{ __('Pembelian') }}</a>
+                            </li>
+                        @endrole
+                        @role('gudang|direktur')
                             <li class="nav-item">
                                 <a class="nav-link text-secondary" href="{{route('produck')}}">
                                 {{ __('Produk') }}</a>

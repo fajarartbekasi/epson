@@ -8,15 +8,11 @@ Actor
     ->data customer (sudah)
     ->laporan
         ->invoice(sudah)
-        ->selesai()
+        ->selesai(sudah)
     ->menerima Pemesanan (sudah)
     ->invite (sudah)
 
 3. gudang
     ->mengelola stock produck (sudah)
 4. direktur
-    ->cetak laporan
-
-
-
-    customer
+    ->cetak laporan (sudah)

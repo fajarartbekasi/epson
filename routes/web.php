@@ -69,4 +69,7 @@ Route::group(['prefix'=>'cetak'], function(){
     route::get('invoice/{pembelian}','Laporan\Transaksi\TransaksiController@show')->name('cetak.invoice');
     route::get('periode','Laporan\Transaksi\TransaksiController@periode')->name('cetak.periode');
     route::get('transaksi','Laporan\Transaksi\TransaksiController@transaksi')->name('cetak.transaksi');
+
+    route::get('produk','Laporan\Produk\ProdukController@show')->name('cetak.produk');
+    route::get('semua-produk','Laporan\Produk\ProdukController@all')->name('cetak.semua-produk');
 });

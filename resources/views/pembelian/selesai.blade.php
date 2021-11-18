@@ -28,10 +28,12 @@
                                     <button class="btn btn-info">Cari Laporan</button>
                                     <a href="{{route('cetak.transaksi')}}" class="btn btn-info">Cetak Semua Page</a>
                                 </div>
-                                <div class="mb-2">
-                                    <a href="{{route('petugas.pembelian.berlangsung')}}" class="btn btn-info">Transaksi Berlangsung</a>
-                                    <a href="{{route('petugas.pembelian.selesai')}}" class="btn btn-primary">Transaksi Selesai</a>
-                                </div>
+                                @role('admin')
+                                    <div class="mb-2">
+                                        <a href="{{route('petugas.pembelian.berlangsung')}}" class="btn btn-info">Transaksi Berlangsung</a>
+                                        <a href="{{route('petugas.pembelian.selesai')}}" class="btn btn-primary">Transaksi Selesai</a>
+                                    </div>
+                                @endrole
                             </div>
                         </form>
                     </div>
