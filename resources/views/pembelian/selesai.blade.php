@@ -8,8 +8,32 @@
             <div class="card border-0 shadow-sm">
                 <div class="card-body">
                     <div class="mb-2">
-                        <a href="{{route('petugas.pembelian.berlangsung')}}" class="btn btn-info">Transaksi Berlangsung</a>
-                        <a href="{{route('petugas.pembelian.selesai')}}" class="btn btn-success">Transaksi Selesai</a>
+                        <form action="{{route('cetak.periode')}}" method="get">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="">Tanggal awal</label>
+                                        <input type="date" name="tgl_awal" id="" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="">Tanggal akhir</label>
+                                        <input type="date" name="tgl_akhir" id="" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <button class="btn btn-info">Cari Laporan</button>
+                                    <a href="{{route('cetak.transaksi')}}" class="btn btn-info">Cetak Semua Page</a>
+                                </div>
+                                <div class="mb-2">
+                                    <a href="{{route('petugas.pembelian.berlangsung')}}" class="btn btn-info">Transaksi Berlangsung</a>
+                                    <a href="{{route('petugas.pembelian.selesai')}}" class="btn btn-primary">Transaksi Selesai</a>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                     <table class="table table-striped">
                         <thead>

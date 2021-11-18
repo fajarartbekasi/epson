@@ -9,7 +9,7 @@
                 <div class="card-body">
                     <div class="mb-2">
                         <a href="{{route('petugas.pembelian.berlangsung')}}" class="btn btn-info">Transaksi Berlangsung</a>
-                        <a href="{{route('petugas.pembelian.selesai')}}" class="btn btn-success">Transaksi Selesai</a>
+                        <a href="{{route('petugas.pembelian.selesai')}}" class="btn btn-primary">Transaksi Selesai</a>
                     </div>
                     <table class="table table-striped">
                         <thead>
