@@ -10,7 +10,7 @@
                 </div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
+                    <form method="POST" action="{{ route('customer.register') }}">
                         @csrf
 
                         <div class="form-group">
@@ -32,6 +32,24 @@
                         </div>
 
                         <div class="form-group">
+                            <input id="address" type="address" class="form-control{{ $errors->has('address') ? ' is-invalid' : '' }}" name="address" value="{{ old('address') }}" placeholder="address" required>
+                                @if ($errors->has('address'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('address') }}</strong>
+                                    </span>
+                                @endif
+                        </div>
+
+                        <div class="form-group">
+                            <input id="phone" type="phone" class="form-control{{ $errors->has('phone') ? ' is-invalid' : '' }}" name="phone" value="{{ old('phone') }}" placeholder="phone" required>
+                                @if ($errors->has('phone'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('phone') }}</strong>
+                                    </span>
+                                @endif
+                        </div>
+
+                        <div class="form-group">
                             <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" placeholder="password" required>
                                 @if ($errors->has('password'))
                                     <span class="invalid-feedback" role="alert">
@@ -42,6 +60,7 @@
 
                         <div class="form-group">
                             <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="confirmation password" required>
+                            <input type="hidden" class="form-control" name="roles" value="customer" required>
                         </div>
 
                         <div class="form-group">

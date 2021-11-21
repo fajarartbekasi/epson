@@ -73,3 +73,5 @@ Route::group(['prefix'=>'cetak'], function(){
     route::get('produk','Laporan\Produk\ProdukController@show')->name('cetak.produk');
     route::get('semua-produk','Laporan\Produk\ProdukController@all')->name('cetak.semua-produk');
 });
+
+route::post('customer/register', 'Auth\DaftarController@store')->name('customer.register');
