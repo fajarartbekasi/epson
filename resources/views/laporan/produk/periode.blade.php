@@ -29,9 +29,6 @@
                     <th>Nama Produk</th>
                     <th>Harga</th>
                     <th>stock</th>
-                    @role('gudang')
-                        <th>Options</th>
-                    @endrole
                 </tr>
             </thead>
             <tbody>
@@ -41,16 +38,7 @@
                         <td>{{$produck->name}}</td>
                         <td>{{$produck->price}}</td>
                         <td>{{$produck->stok}}</td>
-                        @role('gudang')
-                            <td>
-                                <form action="" method="post">
-                                    @csrf
-                                    @method('DELETE')
-                                    <a href="{{route('produck.edit',$produck->id)}}" class="btn btn-info btn-sm">Edit Produk</a>
-                                    <button type="submit" class="btn btn-danger btn-sm">Hapus Kategori</button>
-                                </form>
-                            </td>
-                        @endrole
+
                     </tr>
                 @endforeach
             </tbody>
