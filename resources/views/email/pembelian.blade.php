@@ -5,7 +5,7 @@
 upload pembayaran anda terimakasih
 </p>
 <P>Kode Invoice : {{$pembelian->invoice}}</P>
-@component('mail::button', ['url' => "http://localhost/epsonpublic/user/ambil-form/{$pembelian->id}"])
+@component('mail::button', ['url' => "http://localhost/epson/public/user/ambil-form/{$pembelian->id}"])
     upload pembayaran
 @endcomponent
 @endcomponent

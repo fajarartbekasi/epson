@@ -7,7 +7,7 @@
         <div>
             <h6>Nomor invoice : {{ $order->invoice }}</h6>
             <h6>Nama Penerima : {{ $order->user->name }}</h6>
-            <h6>Nama Penerima : {{ $order->user->phone }}</h6>
+            <h6>Telephone : {{ $order->user->phone }}</h6>
             <h6>Diterbitkan oleh</h6>
             <h6>Penjual : {{ config('app.name', 'Laravel') }}</h6>
             <h6>tanggal : {{ $order->created_at->format('Y-m-d') }}</h6>
