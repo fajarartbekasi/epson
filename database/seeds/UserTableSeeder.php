@@ -25,7 +25,7 @@ class UserTableSeeder extends Seeder
 
         $this->command->info('>_ Here is your admin details to login:');
         $this->command->warn($petugas->email);
-        $this->command->warn('Password is "epson123"');
+        $this->command->warn('Password is "secret"');
 
         // anggota
         $anggota = factory(User::class)->create([
