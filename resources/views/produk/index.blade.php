@@ -41,7 +41,7 @@
                                 <th>Kategori</th>
                                 <th>Nama Produk</th>
                                 <th>Harga</th>
-                                <th>stock</th>
+                                <th>Stock</th>
                                 @role('gudang')
                                     <th>Options</th>
                                 @endrole

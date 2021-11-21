@@ -72,11 +72,11 @@
                         @role('customer')
                             <li class="nav-item">
                                 <a class="nav-link text-secondary" href="{{route('user.transaksi')}}">
-                                {{ __('transaksi') }}</a>
+                                {{ __('Transaksi') }}</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-secondary" href="{{route('user.cek.cart')}}">
-                                {{ __('keranjang') }}</a>
+                                {{ __('Keranjang') }}</a>
                             </li>
                         @endrole
                     </ul>

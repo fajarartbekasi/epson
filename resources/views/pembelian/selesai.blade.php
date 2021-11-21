@@ -40,12 +40,12 @@
                     <table class="table table-striped">
                         <thead>
                             <tr>
-                                <th>invoice</th>
+                                <th>Invoice</th>
                                 <th>Nama Produk</th>
                                 <th>Harga</th>
-                                <th>jumlah</th>
+                                <th>Jumlah</th>
                                 <th>Status</th>
-                                <th>total</th>
+                                <th>Total</th>
                             </tr>
                         </thead>
                         <tbody>

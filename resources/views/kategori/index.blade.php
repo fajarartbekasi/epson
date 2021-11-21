@@ -14,7 +14,7 @@
                             <tr>
                                 <th>Nama Kategori</th>
                                 <th>No Rak</th>
-                                <th>Option</th>
+                                <th>Options</th>
                             </tr>
                         </thead>
                         <tbody>
