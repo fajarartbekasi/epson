@@ -55,7 +55,7 @@
     @forelse($kategoris as $kategori)
         <a class="nav-link" aria-current="page" href="#">{{$kategori->name}}</a>
         @empty
-        <span class="alert alert-info">Maaf saat ini kategori belum tersedia.</span>
+        <p class="offset-md-4 pt-2 text-secondary">Maaf Kategori belum tersedia</p>
     @endforelse
   </nav>
 </div>

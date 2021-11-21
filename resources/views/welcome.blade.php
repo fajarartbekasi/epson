@@ -9,7 +9,7 @@
             <h6>Produk</h6>
             <div class="row">
             @forelse($produks as $produk)
-                <div class="col-md-3 pt-2">
+                <div class="col-md-4 pt-2">
                     <div class="card border-0 shadow-sm">
                         <img src="{{ url('storage/'. $produk->image) }}" class="card-img-top" alt="...">
                         <div class="card-body">
@@ -24,7 +24,7 @@
                     </div>
                 </div>
                 @empty
-                <h2>Maaf Produk belum tersedia nich</h2>
+                <h1 class="offset-md-4">Maaf Produk belum tersedia</h1>
             @endforelse
             </div>
         </div>
