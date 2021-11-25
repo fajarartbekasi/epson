@@ -12,7 +12,9 @@ class UserController extends Controller
 
     public function index()
     {
-        $users = User::latest()->paginate(5);
+        $users = User::whereHas('roles', function($roles){
+            $roles->whereNotIn('roles.name', ['customer']);
+        })->latest()->paginate(6);
 
         return view('user.index', compact('users'));
     }

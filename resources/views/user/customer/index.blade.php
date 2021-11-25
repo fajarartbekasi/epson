@@ -18,6 +18,7 @@
                                 <th>Alamat</th>
                                 <th>Phone</th>
                                 <th>Email</th>
+                                <th>Options</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -27,6 +28,11 @@
                                     <td>{{$customer->users->first()->address}}</td>
                                     <td>{{$customer->users->first()->phone}}</td>
                                     <td>{{$customer->users->first()->email}}</td>
+                                    <td>
+                                        <a href="{{route('petugas.customer.edit', $customer->users->first()->id)}}" class="btn btn-info btn-sm">
+                                            Edit Customer
+                                        </a>
+                                    </td>
                                 </tr>
                             @endforeach
                         </tbody>

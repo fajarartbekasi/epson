@@ -58,6 +58,7 @@ Route::group(['prefix' => 'petugas'], function(){
     route::delete('/destroy/{user}','UserController@destroy')->name('petugas.destroy');
 
     route::get('customer','CustomerController@index')->name('petugas.customer');
+    route::get('customer/edit/{user}','CustomerController@edit')->name('petugas.customer.edit');
 
     route::get('pembelian', 'Admin\TransaksiController@index')->name('petugas.pembelian');
     route::get('transaksi/berlangsung', 'Admin\TransaksiController@berlangsung')->name('petugas.pembelian.berlangsung');
