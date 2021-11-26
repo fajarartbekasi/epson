@@ -36,7 +36,7 @@
                                                 Edit Customer
                                             </a>
                                             <button type="submit" class="btn btn-danger btn-sm">
-                                                Hapus User
+                                                Hapus Customer
                                             </button>
                                         </form>
 

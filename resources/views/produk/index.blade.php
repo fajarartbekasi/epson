@@ -60,7 +60,7 @@
                                                 @csrf
                                                 @method('DELETE')
                                                 <a href="{{route('produck.edit',$produck->id)}}" class="btn btn-info btn-sm">Edit Produk</a>
-                                                <button type="submit" class="btn btn-danger btn-sm">Hapus Produck</button>
+                                                <button type="submit" class="btn btn-danger btn-sm">Hapus Produk</button>
                                             </form>
                                         </td>
                                     @endrole
