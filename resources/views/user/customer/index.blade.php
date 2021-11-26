@@ -29,9 +29,17 @@
                                     <td>{{$customer->users->first()->phone}}</td>
                                     <td>{{$customer->users->first()->email}}</td>
                                     <td>
-                                        <a href="{{route('petugas.customer.edit', $customer->users->first()->id)}}" class="btn btn-info btn-sm">
-                                            Edit Customer
-                                        </a>
+                                        <form action="{{route('petugas.destroy', $customer->users->first()->id)}}" method="post">
+                                            @csrf
+                                            @method('DELETE')
+                                            <a href="{{route('petugas.customer.edit', $customer->users->first()->id)}}" class="btn btn-info btn-sm">
+                                                Edit Customer
+                                            </a>
+                                            <button type="submit" class="btn btn-danger btn-sm">
+                                                Hapus User
+                                            </button>
+                                        </form>
+
                                     </td>
                                 </tr>
                             @endforeach
