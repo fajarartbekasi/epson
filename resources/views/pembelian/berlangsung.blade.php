@@ -38,8 +38,6 @@
                                         <form action="{{route('petugas.pembelian.update', $pembelian->id)}}" method="post">
                                             @csrf
                                             @method('PATCH')
-
-                                            <a href="{{route('cetak.invoice', $pembelian->id)}}" class="btn btn-info btn-sm">Cetak Invoice</a>
                                             <button class="btn btn-primary btn-sm">Update transaksi</button>
                                         </form>
                                     </td>

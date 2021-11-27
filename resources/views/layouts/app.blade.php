@@ -50,6 +50,18 @@
                                 <a class="nav-link text-secondary" href="{{route('petugas.pembelian')}}">
                                 {{ __('Pembelian') }}</a>
                             </li>
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle text-secondary" href="#" role="button" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false" v-pre>
+                                    Laporan<span class="caret"></span>
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('report') }}">
+                                        Transaksi Selesai
+                                    </a>
+                                </div>
+                            </li>
                         @endrole
                         @role('gudang')
                             <li class="nav-item">
@@ -67,6 +79,18 @@
                             <li class="nav-item">
                                 <a class="nav-link text-secondary" href="{{route('produck')}}">
                                 {{ __('Produk') }}</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle text-secondary" href="#" role="button" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false" v-pre>
+                                    Laporan<span class="caret"></span>
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('report.produck') }}">
+                                        Produk
+                                    </a>
+                                </div>
                             </li>
                         @endrole
                         @role('customer')

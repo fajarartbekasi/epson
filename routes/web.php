@@ -76,3 +76,8 @@ Route::group(['prefix'=>'cetak'], function(){
 });
 
 route::post('customer/register', 'Auth\DaftarController@store')->name('customer.register');
+
+Route::group(['prefix'=>'report'], function(){
+    route::get('/', 'ReportController@index')->name('report');
+    route::get('/produck', 'ReportController@show')->name('report.produck');
+});
