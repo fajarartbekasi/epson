@@ -11,7 +11,7 @@
                         <a href="{{route('produck.create')}}" class="btn btn-info">Tambah Produk</a>
                     </div>
                     @endrole
-                    @role('direktur')
+                    @role('direktur|admin')
                     <div class="mb-2">
                         <form action="{{route('cetak.produk')}}" method="get">
                             <div class="row">

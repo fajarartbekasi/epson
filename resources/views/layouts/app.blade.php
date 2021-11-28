@@ -57,6 +57,9 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('report.produck') }}">
+                                        Produck
+                                    </a>
                                     <a class="dropdown-item" href="{{ route('report') }}">
                                         Transaksi Selesai
                                     </a>
@@ -75,7 +78,7 @@
                                 {{ __('Pembelian') }}</a>
                             </li>
                         @endrole
-                        @role('gudang|direktur')
+                        @role('direktur')
                             <li class="nav-item">
                                 <a class="nav-link text-secondary" href="{{route('produck')}}">
                                 {{ __('Produk') }}</a>
@@ -87,8 +90,11 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('report.produck') }}">
+                                    <a class="dropdown-item text-secondary"  href="{{ route('report.produck') }}">
                                         Produk
+                                    </a>
+                                    <a class="dropdown-item" href="{{ route('report') }}">
+                                        Transaksi Selesai
                                     </a>
                                 </div>
                             </li>
