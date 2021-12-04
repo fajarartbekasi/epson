@@ -9,7 +9,7 @@
                 <div class="card-body">
                     <div class="d-flex justify-content-between">
                         <h4 class="text-info">{{ config('app.name', 'Laravel') }}</h4>
-                        <h4 class="text-secondary">Tujuan Pengiriman :</h4>
+                        <h4 class="text-secondary">Tujuan Pengiriman : {{$order->address}}</h4>
                     </div>
 
                     <div class="d-flex justify-content-between mb-3">
