@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             @forelse ($pembayarans as $get)
-                <div class="card border-0 shadow-sm">
+                <div class="card border-0 shadow-sm mb-3">
                     <div class="card-head border-0">
                         <div class="alert alert-info">
                             <h4>Hello, {{$get->user->name}}</h4>

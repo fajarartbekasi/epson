@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Kategori;
 use App\Pembelian;
-use App\Pembayaran;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Intervention\Image\Facades\Image;
@@ -13,12 +12,12 @@ class PembayaranController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
+        return $this->middleware('auth');
     }
     public function create($id)
     {
         $data = [
-            'pembayarans' => Pembayaran::where('user_id', Auth::user()->id),
+            'pembayarans' => Pembelian::where('user_id', Auth::user()->id)->get(),
             'kategoris'   => Kategori::all(),
         ];
         return view('pembayaran.create', $data);
