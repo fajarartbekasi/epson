@@ -48,7 +48,7 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-secondary" href="{{route('petugas.pembelian')}}">
-                                {{ __('Pembelian') }}</a>
+                                {{ __('Pesanan') }}</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle text-secondary" href="#" role="button" data-toggle="dropdown"
@@ -79,7 +79,7 @@
                         @role('direktur')
                             <li class="nav-item">
                                 <a class="nav-link text-secondary" href="{{route('petugas.pembelian.selesai')}}">
-                                {{ __('Pembelian') }}</a>
+                                {{ __('Pesanan') }}</a>
                             </li>
                         @endrole
                         @role('direktur')
