@@ -6,6 +6,7 @@ use App\Kategori;
 use App\Pembelian;
 use App\Pembayaran;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Intervention\Image\Facades\Image;
 
 class PembayaranController extends Controller
@@ -16,9 +17,11 @@ class PembayaranController extends Controller
     }
     public function create($id)
     {
-        $pembayaran = Pembelian::with('carts')->findOrFail($id);
-        $kategoris  = Kategori::all();
-        return view('pembayaran.create', compact('pembayaran','kategoris'));
+        $data = [
+            'pembayarans' => Pembayaran::where('user_id', Auth::user()->id),
+            'kategoris'   => Kategori::all(),
+        ];
+        return view('pembayaran.create', $data);
     }
     public function store($id)
     {
