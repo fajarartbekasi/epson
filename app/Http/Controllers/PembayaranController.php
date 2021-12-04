@@ -10,7 +10,10 @@ use Intervention\Image\Facades\Image;
 
 class PembayaranController extends Controller
 {
-
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function create($id)
     {
         $pembayaran = Pembelian::with('carts')->findOrFail($id);
