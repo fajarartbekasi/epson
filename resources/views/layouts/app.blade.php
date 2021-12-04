@@ -71,6 +71,10 @@
                                 <a class="nav-link text-secondary" href="{{route('kategory')}}">
                                 {{ __('Kategori') }}</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-secondary" href="{{route('produck')}}">
+                                    {{ __('Produk') }}</a>
+                            </li>
                         @endrole
                         @role('direktur')
                             <li class="nav-item">
