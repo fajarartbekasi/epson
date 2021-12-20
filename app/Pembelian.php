@@ -16,7 +16,7 @@ class Pembelian extends Model
         return [
             'invoice' => [
                 'format' => function () {
-                    return 'IN' . date('dmY');
+                    return 'IN' . date('dmy');
                 }
             ]
 
