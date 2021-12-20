@@ -26,6 +26,7 @@
                         <th>Jumlah</th>
                         <th>Harga</th>
                         <th>Subtotal</th>
+                        <th>Tanggal</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -35,6 +36,7 @@
                             <td>{{ $order->carts()->first()->qty }}</td>
                             <td>{{ $order->carts()->first()->price }}</td>
                             <td>{{ number_format($order->subtotal) }}</td>
+                            <td>{{ $order->created_at->format('Y-m-d') }}</td>
                         </tr>
                     @endforeach
                 </tbody>
