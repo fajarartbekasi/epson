@@ -32,7 +32,7 @@
                                     <td>{{$produck->stok}}</td>
                                     @role('gudang')
                                         <td>
-                                            <form action="" method="post">
+                                            <form action="{{route('produk.destroy', $produck->id)}}" method="post">
                                                 @csrf
                                                 @method('DELETE')
                                                 <a href="{{route('produck.edit',$produck->id)}}" class="btn btn-info btn-sm">Edit Produk</a>

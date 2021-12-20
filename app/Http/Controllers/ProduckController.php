@@ -81,5 +81,16 @@ class ProduckController extends Controller
             $image->save();
         }
     }
+    public function destroy(Request $request, $id)
+    {
+        $data = Produk::findOrFail($id);
+        $data->delete($request->all());
+
+        if (\File::exists(public_path('storage/' . $data->image))) {
+            \File::delete(public_path('storage/' . $data->image));
+        }
+        flash('Produk telah dihapus');
+        return redirect()->back();
+    }
 
 }

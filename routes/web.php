@@ -33,6 +33,7 @@ Route::group(['prefix' => 'produck'], function(){
     route::get('/edit/{produk}', 'ProduckController@edit')->name('produck.edit');
     route::patch('/update/{produk}', 'ProduckController@update')->name('produck.update');
     route::get('/show/{produk}', 'ProduckController@show')->name('produck.show');
+    route::delete('/destroy/{produk}', 'ProduckController@destroy')->name('produk.destroy');
 });
 
 Route::group(['prefix'=> 'user'], function(){
