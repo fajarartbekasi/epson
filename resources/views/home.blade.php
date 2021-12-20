@@ -51,7 +51,7 @@
         <div class="col-md-12">
             <div class="card border-0 shadow-sm">
                 <div class="card-body">
-                    <h5>Total Produck</h5>
+                    <h5>Total Produk</h5>
                     <div>
                         <h4 class="text-info">{{$produck}}</h4>
                     </div>
@@ -63,7 +63,7 @@
         <div class="col-md-6">
             <div class="card border-0 shadow-sm">
                 <div class="card-body">
-                    <h5>Total Produck</h5>
+                    <h5>Total Produk</h5>
                     <div>
                         <h4 class="text-info">{{$produck}}</h4>
                     </div>

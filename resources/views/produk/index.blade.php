@@ -18,6 +18,7 @@
                                 <th>Nama Produk</th>
                                 <th>Harga</th>
                                 <th>Stock</th>
+                                <th>Tanggal</th>
                                 @role('gudang')
                                     <th>Options</th>
                                 @endrole
