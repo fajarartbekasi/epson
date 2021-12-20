@@ -89,7 +89,6 @@ class CartController extends Controller
             });
 
             $pembelian = Pembelian::create([
-                'invoice' => Str::random(4) . '-' . time(),
                 'user_id' => $request->user_id,
                 'status' => 'menunggu pembayaran',
                 'subtotal' => $subtotal,
