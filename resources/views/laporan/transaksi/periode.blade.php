@@ -25,21 +25,25 @@
         <table class="table table-striped">
             <thead>
                     <tr>
-                        <th>Nama</th>
-                        <th>Jumlah</th>
+                        <th>Invoice</th>
+                        <th>Nama Produk</th>
                         <th>Harga</th>
-                        <th>Subtotal</th>
+                        <th>Jumlah</th>
                         <th>Tanggal</th>
+                        <th>Status</th>
+                        <th>Total</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach($pembelians as $order)
                         <tr>
+                            <td>{{ $order->carts()->first()->pembelian->invoice }}</td>
                             <td>{{ $order->carts()->first()->produk->name }}</td>
-                            <td>{{ $order->carts()->first()->qty }}</td>
                             <td>{{ $order->carts()->first()->price }}</td>
-                            <td>{{ number_format($order->subtotal) }}</td>
+                            <td>{{ $order->carts()->first()->qty }}</td>
                             <td>{{ $order->created_at->format('Y-m-d') }}</td>
+                            <td>{{ $order->carts()->first()->pembelian->status }}</td>
+                            <td>{{ number_format($order->subtotal) }}</td>
                         </tr>
                     @endforeach
                 </tbody>
