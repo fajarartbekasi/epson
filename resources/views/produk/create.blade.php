@@ -39,7 +39,7 @@
                         </div>
 
                         <div>
-                            <button type="submit" class="btn btn-info">Simpan kategori</button>
+                            <button type="submit" class="btn btn-info">Simpan Produk</button>
                         </div>
                     </form>
                 </div>
