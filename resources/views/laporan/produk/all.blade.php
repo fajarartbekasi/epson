@@ -26,6 +26,7 @@
                     <th>Nama Produk</th>
                     <th>Harga</th>
                     <th>stock</th>
+                    <th>Tanggal</th>
                 </tr>
             </thead>
             <tbody>
@@ -35,6 +36,7 @@
                         <td>{{$produck->name}}</td>
                         <td>{{$produck->price}}</td>
                         <td>{{$produck->stok}}</td>
+                        <td>{{$produck->created_at->format('Y-m-d')}}</td>
                     </tr>
                 @endforeach
             </tbody>

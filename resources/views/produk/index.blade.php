@@ -30,6 +30,7 @@
                                     <td>{{$produck->name}}</td>
                                     <td>{{$produck->price}}</td>
                                     <td>{{$produck->stok}}</td>
+                                    <td>{{$produck->created_at->format('Y-m-d')}}</td>
                                     @role('gudang')
                                         <td>
                                             <form action="{{route('produk.destroy', $produck->id)}}" method="post">
