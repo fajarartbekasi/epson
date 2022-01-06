@@ -61,7 +61,7 @@
                             </tr>
                             @empty
                             <tr>
-                                <td colspan="6" class="text-center">
+                                <td colspan="7" class="text-center">
                                     Maaf Transaksi anda belum tersedia silahkan melakukan transaksi
                                 </td>
                             </tr>

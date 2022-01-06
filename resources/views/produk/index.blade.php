@@ -6,7 +6,7 @@
         <div class="col-md-12">
             <div class="card border-0">
                 <div class="card-body">
-                    @role('gudang')
+                    @role('admin')
                         <div class="ml-3 mb-3">
                             <a href="{{route('produck.create')}}" class="btn btn-info">Tambah Produk</a>
                         </div>
@@ -19,7 +19,7 @@
                                 <th>Harga</th>
                                 <th>Stock</th>
                                 <th>Tanggal</th>
-                                @role('gudang')
+                                @role('admin')
                                     <th>Options</th>
                                 @endrole
                             </tr>
@@ -32,7 +32,7 @@
                                     <td>{{$produck->price}}</td>
                                     <td>{{$produck->stok}}</td>
                                     <td>{{$produck->created_at->format('Y-m-d')}}</td>
-                                    @role('gudang')
+                                    @role('admin')
                                         <td>
                                             <form action="{{route('produk.destroy', $produck->id)}}" method="post">
                                                 @csrf

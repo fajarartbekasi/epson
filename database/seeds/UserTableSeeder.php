@@ -12,7 +12,7 @@ class UserTableSeeder extends Seeder
      */
     public function run()
     {
-        // ketua
+        // admin
         $petugas = factory(User::class)->create([
             'name'     => 'Mega',
             'email'    => 'mega@epson.com',

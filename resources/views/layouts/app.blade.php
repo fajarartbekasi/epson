@@ -47,6 +47,14 @@
                                 {{ __('Data Customer') }}</a>
                             </li>
                             <li class="nav-item">
+                                <a class="nav-link text-secondary" href="{{route('kategory')}}">
+                                    {{ __('Kategori') }}</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-secondary" href="{{route('produck')}}">
+                                    {{ __('Produk') }}</a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link text-secondary" href="{{route('petugas.pembelian')}}">
                                 {{ __('Pesanan') }}</a>
                             </li>
@@ -64,16 +72,6 @@
                                         Transaksi Selesai
                                     </a>
                                 </div>
-                            </li>
-                        @endrole
-                        @role('gudang')
-                            <li class="nav-item">
-                                <a class="nav-link text-secondary" href="{{route('kategory')}}">
-                                {{ __('Kategori') }}</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-secondary" href="{{route('produck')}}">
-                                    {{ __('Produk') }}</a>
                             </li>
                         @endrole
                         @role('direktur')

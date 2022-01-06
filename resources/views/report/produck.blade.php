@@ -6,11 +6,6 @@
         <div class="col-md-12">
             <div class="card border-0">
                 <div class="card-body">
-                    @role('gudang')
-                    <div class="ml-3 mb-3">
-                        <a href="{{route('produck.create')}}" class="btn btn-info">Tambah Produk</a>
-                    </div>
-                    @endrole
                     @role('direktur|admin')
                     <div class="mb-2">
                         <form action="{{route('cetak.produk')}}" method="get">
@@ -42,9 +37,6 @@
                                 <th>Nama Produk</th>
                                 <th>Harga</th>
                                 <th>Stock</th>
-                                @role('gudang')
-                                <th>Options</th>
-                                @endrole
                             </tr>
                         </thead>
                         <tbody>
@@ -54,17 +46,7 @@
                                 <td>{{$produck->name}}</td>
                                 <td>{{$produck->price}}</td>
                                 <td>{{$produck->stok}}</td>
-                                @role('gudang')
-                                <td>
-                                    <form action="" method="post">
-                                        @csrf
-                                        @method('DELETE')
-                                        <a href="{{route('produck.edit',$produck->id)}}"
-                                            class="btn btn-info btn-sm">Edit Produk</a>
-                                        <button type="submit" class="btn btn-danger btn-sm">Hapus Produk</button>
-                                    </form>
-                                </td>
-                                @endrole
+
                             </tr>
                             @endforeach
                         </tbody>
