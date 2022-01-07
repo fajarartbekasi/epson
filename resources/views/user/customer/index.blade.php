@@ -24,15 +24,15 @@
                         <tbody>
                             @foreach($users as $customer)
                                 <tr>
-                                    <td>{{$customer->users->first()->name}}</td>
-                                    <td>{{$customer->users->first()->address}}</td>
-                                    <td>{{$customer->users->first()->phone}}</td>
-                                    <td>{{$customer->users->first()->email}}</td>
+                                    <td>{{$customer->name}}</td>
+                                    <td>{{$customer->address}}</td>
+                                    <td>{{$customer->phone}}</td>
+                                    <td>{{$customer->email}}</td>
                                     <td>
-                                        <form action="{{route('petugas.destroy', $customer->users->first()->id)}}" method="post">
+                                        <form action="{{route('petugas.destroy', $customer->id)}}" method="post">
                                             @csrf
                                             @method('DELETE')
-                                            <a href="{{route('petugas.customer.edit', $customer->users->first()->id)}}" class="btn btn-info btn-sm">
+                                            <a href="{{route('petugas.customer.edit', $customer->id)}}" class="btn btn-info btn-sm">
                                                 Edit Customer
                                             </a>
                                             <button type="submit" class="btn btn-danger btn-sm">
@@ -45,7 +45,7 @@
                             @endforeach
                         </tbody>
                     </table>
-                    {{$users->links()}}
+
                 </div>
             </div>
         </div>

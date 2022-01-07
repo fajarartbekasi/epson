@@ -27,7 +27,7 @@ class UserTableSeeder extends Seeder
         $this->command->warn($petugas->email);
         $this->command->warn('Password is "secret"');
 
-        // anggota
+        // customer
         $anggota = factory(User::class)->create([
             'name'     => 'Fajar',
             'email'    => 'fajar@epson.com',

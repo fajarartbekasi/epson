@@ -10,7 +10,10 @@ class CustomerController extends Controller
 {
     public function index()
     {
-        $users = Role::with('users')->where('name','customer')->latest()->paginate(5);
+        $users = User::whereHas('roles', function ($roles) {
+            $roles->whereNotIn('roles.name', ['admin','direktur']);
+        })->latest()->paginate(6);
+
         return view('user.customer.index', compact('users'));
     }
     public function edit($id)
