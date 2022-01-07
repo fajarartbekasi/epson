@@ -82,7 +82,7 @@ class UserController extends Controller
 
         flash()->success('Data penguna berhasil di perbaharui');
 
-        return redirect()->route('petugas');
+        return redirect()->back();
     }
     public function destroy(Request $request, $id)
     {
