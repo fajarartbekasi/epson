@@ -42,10 +42,11 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="">Pilih Akses</label>
-                                    <select name="roles" id="" class="form-control">
-                                        <option value="">Pilih akses</option>
+                                    <select name="roles" id="roles" class="form-control">
                                         @foreach ($roles as $role)
-                                            <option value="{{$role->id}}">{{$role->name}}</option>
+                                        <option value="{{ $role }}" {{ $user->roles->implode('name', ', ') == $role ? 'selected' : '' }}>
+                                            {{ $role }}
+                                        </option>
                                         @endforeach
                                     </select>
                                 </div>
