@@ -64,20 +64,23 @@ class UserController extends Controller
             'password'  => 'required',
         ]);
 
-        $user = User::findOrFail($id);
+        if (auth()->user()->id == $id) {
+            flash('Peringatan ! Pembaruan pengguna yang saat ini masuk tidak diizinkan,
+                   silahkan menggunakan fitur pengaturan.')->warning();
+            return redirect()->back();
+        }
 
-        // Update user
+        $user = User::findOrFail($id);
         $user->fill($request->except('roles', 'password'));
 
-        if($request->get('password')) {
+        if ($request->get('password')) {
             $user->password = bcrypt($request->get('password'));
         }
 
-        $this->syncPermissions($request, $user);
-
         $user->save();
+        $user->syncRoles($request->get('roles'));
 
-        flash()->success('Anggota berhasil di update');
+        flash()->success('Data penguna berhasil di perbaharui');
 
         return redirect()->route('petugas');
     }
