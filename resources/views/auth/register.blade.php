@@ -6,7 +6,7 @@
         <div class="col-md-4">
             <div class="card border-0">
                 <div class="card-header bg-white border-0 shadow-sm">
-                    {{ __('Silahkan Register dulu') }}
+                    {{ __('Silahkan Register') }}
                 </div>
 
                 <div class="card-body">
