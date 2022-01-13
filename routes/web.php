@@ -41,7 +41,7 @@ Route::group(['prefix'=> 'user'], function(){
     route::get('cek/cart', 'CartController@listCart')->name('user.cek.cart');
     route::get('checkout/cart', 'CartController@checkout')->name('user.checkout.cart');
     route::post('/proses/checkout', 'CartController@prosesCheckout')->name('user.proses.checkout');
-    route::get('/checkout/selesai/{invoice}', 'CartController@checkoutSelesai')->name('user.checkout.selesai');
+    route::get('/checkout/selesai/{cart}', 'CartController@checkoutSelesai')->name('user.checkout.selesai');
 
     route::get('ambil-form/{pembelian}','PembayaranController@create')->name('user.ambil-form');
     route::post('upload-payment/{pembelian}','PembayaranController@store')->name('user.upload-payment');

@@ -112,17 +112,21 @@ class CartController extends Controller
             $cookie = cookie('epson', json_encode($carts), 2880);
             Cookie::queue(Cookie::forget('epson'));
             flash('Terimakasih telah berbelanjan di toko kami, silahkan cek email anda untuk melakukan upload pembayaran');
-            return redirect(route('user.checkout.selesai', $pembelian->invoice))->cookie($cookie);
+            return redirect(route('user.checkout.selesai', $pembelian->id))->cookie($cookie);
         } catch (\Exception $e) {
             DB::rollback();
             return redirect()->back()->with(['error' => $e->getMessage()]);
         }
 
     }
-    public function checkoutSelesai($invoice)
+    public function checkoutSelesai($id)
     {
-        $kategoris = Kategori::all();
-        $order = Pembelian::where('invoice', $invoice)->first();
-        return view('cart.invoice', compact('order','kategoris'));
+        $array = [
+            'kategoris' => Kategori::all(),
+            'pembelian' => Cart::where('pembelian_id', '=', $id)->firstOrFail(),
+            'orders'    => Cart::where('pembelian_id', '=', $id)->get(),
+        ];
+
+        return view('cart.invoice', $array);
     }
 }
