@@ -11,6 +11,7 @@ class Role extends \Spatie\Permission\Models\Role
             'admin',
             'customer',
             'direktur',
+            'finance',
         ];
     }
 }

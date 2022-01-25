@@ -57,6 +57,23 @@ class UserTableSeeder extends Seeder
         $this->command->warn($anggota->email);
         $this->command->warn('Password is "secret"');
 
+        $finance = factory(User::class)->create([
+            'name'     => 'Rudi',
+            'email'    => 'rudi@epson.com',
+            'address'  => 'jl. Gatau dimana pokonya disitu ajah',
+            'phone'    => '81311465591',
+            'password' => bcrypt('secret'),
+        ]);
+
+        $finance->assignRole('finance');
+
+        $this->command->info('>_ Here is your finance details to login:');
+        $this->command->warn($finance->email);
+        $this->command->warn('Password is "secret"');
+
+        // bersihkan cache
+        $this->command->call('cache:clear');
+
         // bersihkan cache
         $this->command->call('cache:clear');
     }

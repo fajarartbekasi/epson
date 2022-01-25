@@ -6,7 +6,7 @@
         <div class="col-md-12">
             <div class="card border-0">
                 <div class="card-body">
-                    @role('direktur|admin')
+                    @role('direktur|admin|finance')
                     <div class="mb-2">
                         <form action="{{route('cetak.produk')}}" method="get">
                             <div class="row">
