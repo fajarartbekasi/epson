@@ -20,7 +20,7 @@ class CreateProduksTable extends Migration
             $table->string('price',50);
             $table->string('stok',50);
             $table->longText('desk');
-            $table->string('image');
+            $table->string('image',100);
             $table->timestamps();
         });
     }

@@ -17,7 +17,7 @@ class CreatePembayaransTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('user_id');
             $table->unsignedInteger('pembelian_id');
-            $table->string('image');
+            $table->string('image',100);
             $table->timestamps();
         });
     }
