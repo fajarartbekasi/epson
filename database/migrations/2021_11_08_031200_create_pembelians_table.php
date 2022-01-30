@@ -16,7 +16,7 @@ class CreatePembeliansTable extends Migration
         Schema::create('pembelians', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('user_id');
-            $table->string('invoice');
+            $table->string('invoice',10);
             $table->string('status', 25);
             $table->string('subtotal',50);
             $table->timestamps();
