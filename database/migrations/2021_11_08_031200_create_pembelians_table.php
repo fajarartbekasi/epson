@@ -18,7 +18,7 @@ class CreatePembeliansTable extends Migration
             $table->unsignedInteger('user_id');
             $table->string('invoice');
             $table->string('status', 25);
-            $table->string('subtotal');
+            $table->string('subtotal',50);
             $table->timestamps();
         });
     }
