@@ -17,8 +17,8 @@ class CreateCartsTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('produk_id');
             $table->unsignedInteger('pembelian_id');
-            $table->string('price',50);
-            $table->string('qty',50);
+            $table->string('price',9);
+            $table->string('qty',5);
             $table->timestamps();
         });
     }
